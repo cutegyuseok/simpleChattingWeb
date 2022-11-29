@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.wilwebprac.mapper.chattingMapper">
+
+    <insert id="sendChat" parameterType="java.util.HashMap">
+        insert into chat
+        values((#{nickName}),(#{msg}),(#{date}));
+    </insert>
+
+    <select id="bringChat" resultType="java.util.HashMap">
+    SELECT * FROM chat
+    </select>
+
+
+
+
+</mapper>
